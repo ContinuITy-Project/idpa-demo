@@ -470,7 +470,7 @@ endpoint-annotations:
   - parameter: saveBillingAddressUsingPOST_a_lastName_REQ_PARAM
     input: *Input_saveBillingAddressUsingPOST_a_lastName_REQ_PARAM
     overrides: []
-  - parameter: saveSingleShipUsingPOST_csrfToken_REQ_PARAM
+  - parameter: saveBillingAddressUsingPOST_csrfToken_REQ_PARAM
     input: *Input_extracted_csrfToken
     overrides: []
   - parameter: saveBillingAddressUsingPOST_a_city_REQ_PARAM
