@@ -1,0 +1,63 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Broadleaf Heat Clinic API",
+    "termsOfService": "Terms of service",
+    "contact": {
+      "name": "Broadleaf"
+    },
+    "license": {
+      "name": "LICENSE?",
+      "url": "?"
+    }
+  },
+  "host": "heat-clinic.com",
+  "basePath": "/",
+  "tags": [ ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "homeUsingGET",
+        "operationId": "homeUsingGET"
+      }
+    },
+    "/hot-sauces": {
+      "get": {
+        "summary": "hotSaucesOverviewUsingGET",
+        "operationId": "hotSaucesOverviewUsingGET"
+      }
+    },
+    "/login_post.htm": {
+      "post": {
+        "summary": "doLoginUsingPOST",
+        "operationId": "doLoginUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "password",
+            "in": "query",
+            "description": "password",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "username",
+            "in": "query",
+            "description": "username",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    }
+  }
+}

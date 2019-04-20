@@ -1,0 +1,1 @@
+java -jar continuity.cli.jar

@@ -1,0 +1,82 @@
+version: '3'
+
+services:
+  eureka:
+    image: continuityproject/eureka:1.6.175
+    hostname: eureka
+    networks:
+      - continuity-network
+    ports:
+      - '8761:8761'
+  orchestrator:
+    image: continuityproject/orchestrator:1.6.175
+    hostname: orchestrator
+    networks:
+      - continuity-network
+    ports:
+      - '8080:80'
+    depends_on:
+      - rabbitmq
+      - eureka
+  rabbitmq:
+    image: rabbitmq:3.6.8-management
+    hostname: rabbitmq
+    networks:
+      - continuity-network
+    ports:
+      - '15673:15672'
+  idpa-application:
+    image: continuityproject/idpa-application:1.6.175
+    hostname: idpa-application
+    networks:
+      - continuity-network
+    ports:
+      - '8085:80'
+    depends_on:
+      - rabbitmq
+      - eureka
+  idpa-annotation:
+    image: continuityproject/idpa-annotation:1.6.175
+    hostname: idpa-annotation
+    networks:
+      - continuity-network
+    ports:
+      - '8081:80'
+    depends_on:
+      - rabbitmq
+      - eureka
+  wessbas:
+    image: continuityproject/wessbas:1.6.175
+    hostname: wessbas
+    networks:
+      - continuity-network
+    ports:
+      - '8082:80'
+    depends_on:
+      - rabbitmq
+      - eureka
+  jmeter:
+    image: continuityproject/jmeter:1.6.175
+    hostname: jmeter
+    networks:
+      - continuity-network
+    ports:
+      - '8083:80'
+    depends_on:
+      - rabbitmq
+      - eureka
+  session-logs:
+    image: continuityproject/session-logs:1.6.175
+    hostname: session-logs
+    networks:
+      - continuity-network
+    ports:
+      - '8084:80'
+    volumes:
+      - ./session-logs:/storage
+    depends_on:
+      - rabbitmq
+      - eureka
+networks:
+  continuity-network:
+    driver: bridge

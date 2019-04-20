@@ -1,0 +1,600 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Broadleaf Heat Clinic API",
+    "termsOfService": "Terms of service",
+    "contact": {
+      "name": "Broadleaf"
+    },
+    "license": {
+      "name": "LICENSE?",
+      "url": "?"
+    }
+  },
+  "host": "heat-clinic.com",
+  "basePath": "/",
+  "tags": [ ],
+  "paths": {
+    "/account/wishlist/add": {
+      "post": {
+        "summary": "addJsonUsingPOST_1",
+        "operationId": "addJsonUsingPOST_1",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "quantity",
+            "in": "query",
+            "description": "quantity",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "productId",
+            "in": "query",
+            "description": "productId",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/cart/add": {
+      "post": {
+        "summary": "addUsingPOST",
+        "operationId": "addUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "quantity",
+            "in": "query",
+            "description": "quantity",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "productId",
+            "in": "query",
+            "description": "productId",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "itemAttributes%5BCOLOR%5D",
+            "in": "query",
+            "description": "itemAttributes%5BCOLOR%5D",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "itemAttributes%5BNAME%5D",
+            "in": "query",
+            "description": "itemAttributes%5BNAME%5D",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "itemAttributes%5BSIZE%5D",
+            "in": "query",
+            "description": "itemAttributes%5BSIZE%5D",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/cart": {
+      "get": {
+        "summary": "cartUsingGET",
+        "operationId": "cartUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/checkout/login": {
+      "get": {
+        "summary": "checkoutLoginUsingGET",
+        "operationId": "checkoutLoginUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/checkout": {
+      "get": {
+        "summary": "checkoutUsingGET",
+        "operationId": "checkoutUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+            {
+            "name": "guest-checkout",
+            "in": "query",
+            "description": "guest-checkout",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/clearance": {
+      "get": {
+        "summary": "clearanceUsingGET",
+        "operationId": "clearanceUsingGET"
+      }
+    },
+    "/": {
+      "get": {
+        "summary": "homeUsingGET",
+        "operationId": "homeUsingGET"
+      }
+    },
+    "/hot-sauces/{sauce}": {
+      "get": {
+        "summary": "hotSaucesDetailsUsingGET",
+        "operationId": "hotSaucesDetailsUsingGET",
+        "parameters": [
+            {
+            "name": "sauce",
+            "in": "path",
+            "description": "path",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/hot-sauces": {
+      "get": {
+        "summary": "hotSaucesOverviewUsingGET",
+        "operationId": "hotSaucesOverviewUsingGET"
+      }
+    },
+    "/login": {
+      "get": {
+        "summary": "loginUsingGET",
+        "operationId": "loginUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/login_post.htm": {
+      "post": {
+        "summary": "doLoginUsingPOST",
+        "operationId": "doLoginUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "password",
+            "in": "query",
+            "description": "password",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "username",
+            "in": "query",
+            "description": "username",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/logout": {
+      "get": {
+        "summary": "logoutUsingGET",
+        "operationId": "logoutUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/mens": {
+      "get": {
+        "summary": "mensUsingGET",
+        "operationId": "mensUsingGET"
+      }
+    },
+    "/merchandise/{product}": {
+      "get": {
+        "summary": "merchandiseDetailsUsingGET",
+        "operationId": "merchandiseDetailsUsingGET",
+        "parameters": [
+            {
+            "name": "product",
+            "in": "path",
+            "description": "path",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/merchandise": {
+      "get": {
+        "summary": "merchandiseOverviewUsingGET",
+        "operationId": "merchandiseOverviewUsingGET"
+      }
+    },
+    "/account/wishlist/moveItemToCart": {
+      "post": {
+        "summary": "moveItemToCartUsingPOST",
+        "operationId": "moveItemToCartUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "itemId",
+            "in": "query",
+            "description": "itemId",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/account/wishlist/moveListToCart": {
+      "post": {
+        "summary": "moveListToCartUsingPOST",
+        "operationId": "moveListToCartUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/checkout/cod/complete": {
+      "post": {
+        "summary": "processPassthroughCheckoutUsingPOST",
+        "operationId": "processPassthroughCheckoutUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/account/wishlist/remove": {
+      "get": {
+        "summary": "removeItemFromWishlistUsingGET",
+        "operationId": "removeItemFromWishlistUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+            {
+            "name": "orderItemId",
+            "in": "query",
+            "description": "orderItemId",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/cart/remove": {
+      "get": {
+        "summary": "removeUsingGET",
+        "operationId": "removeUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+            {
+            "name": "productId",
+            "in": "query",
+            "description": "productId",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "orderItemId",
+            "in": "query",
+            "description": "orderItemId",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/checkout/billing": {
+      "post": {
+        "summary": "saveBillingAddressUsingPOST",
+        "operationId": "saveBillingAddressUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "address.postalCode",
+            "in": "query",
+            "description": "address.postalCode",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.firstName",
+            "in": "query",
+            "description": "address.firstName",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.lastName",
+            "in": "query",
+            "description": "address.lastName",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.city",
+            "in": "query",
+            "description": "address.city",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.stateProvinceRegion",
+            "in": "query",
+            "description": "address.stateProvinceRegion",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.addressLine1",
+            "in": "query",
+            "description": "address.addressLine1",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.isoCountryAlpha2",
+            "in": "query",
+            "description": "address.isoCountryAlpha2",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/checkout/singleship": {
+      "post": {
+        "summary": "saveSingleShipUsingPOST",
+        "operationId": "saveSingleShipUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "_useBillingAddress",
+            "in": "query",
+            "description": "_useBillingAddress",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "address.isoCountryAlpha2",
+            "in": "query",
+            "description": "address.isoCountryAlpha2",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "fulfillmentOptionId",
+            "in": "query",
+            "description": "fulfillmentOptionId",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "useBillingAddress",
+            "in": "query",
+            "description": "useBillingAddress",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "searchUsingGET",
+        "operationId": "searchUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+            {
+            "name": "q",
+            "in": "query",
+            "description": "q",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/cart/updateQuantity": {
+      "post": {
+        "summary": "updateQuantityUsingPOST",
+        "operationId": "updateQuantityUsingPOST",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+            {
+            "name": "csrfToken",
+            "in": "query",
+            "description": "csrfToken",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "quantity",
+            "in": "query",
+            "description": "quantity",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "productId",
+            "in": "query",
+            "description": "productId",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "orderItemId",
+            "in": "query",
+            "description": "orderItemId",
+            "required": true,
+            "type": "string"
+            },
+            {
+            "name": "skuId",
+            "in": "query",
+            "description": "skuId",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/account/wishlist": {
+      "get": {
+        "summary": "viewAccountWishlistUsingGET",
+        "operationId": "viewAccountWishlistUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/account/password": {
+      "get": {
+        "summary": "viewChangePasswordUsingGET",
+        "operationId": "viewChangePasswordUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/account/addresses": {
+      "get": {
+        "summary": "viewCustomerAddressesUsingGET",
+        "operationId": "viewCustomerAddressesUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/account/orders/{orderNumber}": {
+      "get": {
+        "summary": "viewOrderDetailsUsingGET",
+        "operationId": "viewOrderDetailsUsingGET",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+            {
+            "name": "orderNumber",
+            "in": "path",
+            "description": "path",
+            "required": true,
+            "type": "string"
+            }
+        ]
+      }
+    },
+    "/account/orders": {
+      "get": {
+        "summary": "viewOrderHistoryUsingGET",
+        "operationId": "viewOrderHistoryUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/account": {
+      "get": {
+        "summary": "viewUpdateAccountUsingGET",
+        "operationId": "viewUpdateAccountUsingGET",
+        "consumes": [
+          "application/json"
+        ]
+      }
+    },
+    "/womens": {
+      "get": {
+        "summary": "womensUsingGET",
+        "operationId": "womensUsingGET"
+      }
+    }
+  }
+}

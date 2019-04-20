@@ -1,0 +1,358 @@
+---
+&heat-clinic timestamp: 2019-04-17T11-59-15-929Z
+endpoints:
+- !<http>
+  &addJsonUsingPOST_1 domain: localhost
+  port: 8080
+  path: /account/wishlist/add
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &addJsonUsingPOST_1_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &addJsonUsingPOST_1_quantity_REQ_PARAM name: quantity
+    parameter-type: REQ_PARAM
+  - &addJsonUsingPOST_1_productId_REQ_PARAM name: productId
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &addUsingPOST domain: localhost
+  port: 8080
+  path: /cart/add
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &addUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &addUsingPOST_quantity_REQ_PARAM name: quantity
+    parameter-type: REQ_PARAM
+  - &addUsingPOST_productId_REQ_PARAM name: productId
+    parameter-type: REQ_PARAM
+  - &addUsingPOST_i_5_5D_REQ_PARAM name: itemAttributes%5BCOLOR%5D
+    parameter-type: REQ_PARAM
+  - &addUsingPOST_i_5_5D_REQ_PARAM_2 name: itemAttributes%5BNAME%5D
+    parameter-type: REQ_PARAM
+  - &addUsingPOST_i_5_5D_REQ_PARAM_3 name: itemAttributes%5BSIZE%5D
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &cartUsingGET domain: localhost
+  port: 8080
+  path: /cart
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &checkoutLoginUsingGET domain: localhost
+  port: 8080
+  path: /checkout/login
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &checkoutUsingGET domain: localhost
+  port: 8080
+  path: /checkout
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  parameters:
+  - &checkoutUsingGET_g_checkout_REQ_PARAM name: guest-checkout
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &clearanceUsingGET domain: localhost
+  port: 8080
+  path: /clearance
+  method: GET
+  protocol: http
+- !<http>
+  &homeUsingGET domain: localhost
+  port: 8080
+  path: /
+  method: GET
+  protocol: http
+- !<http>
+  &hotSaucesDetailsUsingGET domain: localhost
+  port: 8080
+  path: /hot-sauces/{sauce}
+  method: GET
+  parameters:
+  - &hotSaucesDetailsUsingGET_sauce_URL_PART name: sauce
+    parameter-type: URL_PART
+  protocol: http
+- !<http>
+  &hotSaucesOverviewUsingGET domain: localhost
+  port: 8080
+  path: /hot-sauces
+  method: GET
+  protocol: http
+- !<http>
+  &loginUsingGET domain: localhost
+  port: 8080
+  path: /login
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &doLoginUsingPOST domain: localhost
+  port: 8080
+  path: /login_post.htm
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &doLoginUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &doLoginUsingPOST_password_REQ_PARAM name: password
+    parameter-type: REQ_PARAM
+  - &doLoginUsingPOST_username_REQ_PARAM name: username
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &logoutUsingGET domain: localhost
+  port: 8080
+  path: /logout
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &mensUsingGET domain: localhost
+  port: 8080
+  path: /mens
+  method: GET
+  protocol: http
+- !<http>
+  &merchandiseDetailsUsingGET domain: localhost
+  port: 8080
+  path: /merchandise/{product}
+  method: GET
+  parameters:
+  - &merchandiseDetailsUsingGET_product_URL_PART name: product
+    parameter-type: URL_PART
+  protocol: http
+- !<http>
+  &merchandiseOverviewUsingGET domain: localhost
+  port: 8080
+  path: /merchandise
+  method: GET
+  protocol: http
+- !<http>
+  &moveItemToCartUsingPOST domain: localhost
+  port: 8080
+  path: /account/wishlist/moveItemToCart
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &moveItemToCartUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &moveItemToCartUsingPOST_itemId_REQ_PARAM name: itemId
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &moveListToCartUsingPOST domain: localhost
+  port: 8080
+  path: /account/wishlist/moveListToCart
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &moveListToCartUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &processPassthroughCheckoutUsingPOST domain: localhost
+  port: 8080
+  path: /checkout/cod/complete
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &processPassthroughCheckoutUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &removeItemFromWishlistUsingGET domain: localhost
+  port: 8080
+  path: /account/wishlist/remove
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  parameters:
+  - &removeItemFromWishlistUsingGET_orderItemId_REQ_PARAM name: orderItemId
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &removeUsingGET domain: localhost
+  port: 8080
+  path: /cart/remove
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  parameters:
+  - &removeUsingGET_productId_REQ_PARAM name: productId
+    parameter-type: REQ_PARAM
+  - &removeUsingGET_orderItemId_REQ_PARAM name: orderItemId
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &saveBillingAddressUsingPOST domain: localhost
+  port: 8080
+  path: /checkout/billing
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &saveBillingAddressUsingPOST_a_postalCode_REQ_PARAM name: address.postalCode
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_a_firstName_REQ_PARAM name: address.firstName
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_a_lastName_REQ_PARAM name: address.lastName
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_a_city_REQ_PARAM name: address.city
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_a_stateProvinceRegion_REQ_PARAM name: address.stateProvinceRegion
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_a_addressLine1_REQ_PARAM name: address.addressLine1
+    parameter-type: REQ_PARAM
+  - &saveBillingAddressUsingPOST_a_isoCountryAlpha2_REQ_PARAM name: address.isoCountryAlpha2
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &saveSingleShipUsingPOST domain: localhost
+  port: 8080
+  path: /checkout/singleship
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &saveSingleShipUsingPOST__useBillingAddress_REQ_PARAM name: _useBillingAddress
+    parameter-type: REQ_PARAM
+  - &saveSingleShipUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &saveSingleShipUsingPOST_a_isoCountryAlpha2_REQ_PARAM name: address.isoCountryAlpha2
+    parameter-type: REQ_PARAM
+  - &saveSingleShipUsingPOST_fulfillmentOptionId_REQ_PARAM name: fulfillmentOptionId
+    parameter-type: REQ_PARAM
+  - &saveSingleShipUsingPOST_useBillingAddress_REQ_PARAM name: useBillingAddress
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &searchUsingGET domain: localhost
+  port: 8080
+  path: /search
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  parameters:
+  - &searchUsingGET_q_REQ_PARAM name: q
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &updateQuantityUsingPOST domain: localhost
+  port: 8080
+  path: /cart/updateQuantity
+  method: POST
+  headers:
+  - 'Accept: application/x-www-form-urlencoded'
+  - 'Content-Type: application/x-www-form-urlencoded'
+  parameters:
+  - &updateQuantityUsingPOST_csrfToken_REQ_PARAM name: csrfToken
+    parameter-type: REQ_PARAM
+  - &updateQuantityUsingPOST_quantity_REQ_PARAM name: quantity
+    parameter-type: REQ_PARAM
+  - &updateQuantityUsingPOST_productId_REQ_PARAM name: productId
+    parameter-type: REQ_PARAM
+  - &updateQuantityUsingPOST_orderItemId_REQ_PARAM name: orderItemId
+    parameter-type: REQ_PARAM
+  - &updateQuantityUsingPOST_skuId_REQ_PARAM name: skuId
+    parameter-type: REQ_PARAM
+  protocol: http
+- !<http>
+  &viewAccountWishlistUsingGET domain: localhost
+  port: 8080
+  path: /account/wishlist
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &viewChangePasswordUsingGET domain: localhost
+  port: 8080
+  path: /account/password
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &viewCustomerAddressesUsingGET domain: localhost
+  port: 8080
+  path: /account/addresses
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &viewOrderDetailsUsingGET domain: localhost
+  port: 8080
+  path: /account/orders/{orderNumber}
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  parameters:
+  - &viewOrderDetailsUsingGET_orderNumber_URL_PART name: orderNumber
+    parameter-type: URL_PART
+  protocol: http
+- !<http>
+  &viewOrderHistoryUsingGET domain: localhost
+  port: 8080
+  path: /account/orders
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &viewUpdateAccountUsingGET domain: localhost
+  port: 8080
+  path: /account
+  method: GET
+  headers:
+  - 'Accept: application/json'
+  - 'Content-Type: application/json'
+  protocol: http
+- !<http>
+  &womensUsingGET domain: localhost
+  port: 8080
+  path: /womens
+  method: GET
+  protocol: http
