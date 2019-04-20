@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/182383113.svg)](https://zenodo.org/badge/latestdoi/182383113)
+
 # Demo of the Input Data and Properties Annotation
 
 This demo presents how our approach to automated parameterization of load tests under evolving workloads and APIs can be used. We utilize Input Data and Properties Annotations (IDPAs) to parameterize generated load tests and evolve them over API changes.
