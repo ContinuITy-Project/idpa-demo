@@ -2,14 +2,14 @@ version: '3'
 
 services:
   eureka:
-    image: continuityproject/eureka:1.6.175
+    image: continuityproject/eureka:1.6.177
     hostname: eureka
     networks:
       - continuity-network
     ports:
       - '8761:8761'
   orchestrator:
-    image: continuityproject/orchestrator:1.6.175
+    image: continuityproject/orchestrator:1.6.177
     hostname: orchestrator
     networks:
       - continuity-network
@@ -26,7 +26,7 @@ services:
     ports:
       - '15673:15672'
   idpa-application:
-    image: continuityproject/idpa-application:1.6.175
+    image: continuityproject/idpa-application:1.6.177
     hostname: idpa-application
     networks:
       - continuity-network
@@ -36,7 +36,7 @@ services:
       - rabbitmq
       - eureka
   idpa-annotation:
-    image: continuityproject/idpa-annotation:1.6.175
+    image: continuityproject/idpa-annotation:1.6.177
     hostname: idpa-annotation
     networks:
       - continuity-network
@@ -46,7 +46,7 @@ services:
       - rabbitmq
       - eureka
   wessbas:
-    image: continuityproject/wessbas:1.6.175
+    image: continuityproject/wessbas:1.6.177
     hostname: wessbas
     networks:
       - continuity-network
@@ -56,7 +56,7 @@ services:
       - rabbitmq
       - eureka
   jmeter:
-    image: continuityproject/jmeter:1.6.175
+    image: continuityproject/jmeter:1.6.177
     hostname: jmeter
     networks:
       - continuity-network
@@ -66,7 +66,7 @@ services:
       - rabbitmq
       - eureka
   session-logs:
-    image: continuityproject/session-logs:1.6.175
+    image: continuityproject/session-logs:1.6.177
     hostname: session-logs
     networks:
       - continuity-network
