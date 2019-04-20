@@ -4,7 +4,12 @@ This demo presents how our approach to automated parameterization of load tests 
 The approach is implemented as part of [ContinuITy](https://github.com/ContinuITy-Project/ContinuITy).
 As exemplary application to be load tested, we utilize the [Broadleaf Heat Clinic](https://github.com/BroadleafCommerce/DemoSite).
 
-All steps can be replayed with the tooling provided in this repository. You are welcome to try it yourself. Simply download or clone this repository to your local computer and follow the instructions. However, we also provide the results of all steps for an overview.
+All steps can be replayed with the tooling provided in this repository. You are welcome to try it yourself. However, we also provide the results of all steps for an overview.
+
+For cloning the repository to your local computer, please install [Git Large File Storage](https://git-lfs.github.com/) and use the following command:
+```
+git clone https://github.com/ContinuITy-Project/idpa-demo.git
+```
 
 ## Content
 
